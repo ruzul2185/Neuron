@@ -8,14 +8,11 @@ return {
 
     local keymap = vim.keymap.set
 
-    -- Find TODOs (Telescope)
-    keymap("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "TODOs (Telescope)" })
+    -- Single entry point (via Telescope)
+    keymap("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find TODOs" })
 
-    -- Quickfix list
+    -- Optional: Quickfix (keep only if you actually use it)
     keymap("n", "<leader>fq", "<cmd>TodoQuickFix<cr>", { desc = "TODOs (Quickfix)" })
-
-    -- Location list
-    keymap("n", "<leader>fl", "<cmd>TodoLocList<cr>", { desc = "TODOs (LocList)" })
 
     -- Jump between TODOs
     keymap("n", "]t", function()
@@ -25,10 +22,5 @@ return {
     keymap("n", "[t", function()
       require("todo-comments").jump_prev()
     end, { desc = "Prev TODO" })
-
-    -- Search in current project
-    keymap("n", "<leader>fs", function()
-      require("todo-comments").search()
-    end, { desc = "Search TODOs" })
   end,
 }
