@@ -1,4 +1,3 @@
--- TODO: Figure out the dashboard icons not showing up
 return {
     'goolord/alpha-nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },

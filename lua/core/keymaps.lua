@@ -30,9 +30,9 @@ vim.keymap.set("v", "p", '"_dp')
 -- clear search highlight
 vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "Clear search highlight" })
 
--- tabs
-vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "New tab" })
-vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close tab" })
-vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Next tab" })
-vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Previous tab" })
-vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open buffer in new tab" })
+-- Tabs Management
+vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
+vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
+vim.keymap.set("n", "<leader>tj", "<cmd>tabn<CR>", { desc = "Next tab" })
+vim.keymap.set("n", "<leader>tk", "<cmd>tabp<CR>", { desc = "Previous tab" })
+vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "List buffers" })
