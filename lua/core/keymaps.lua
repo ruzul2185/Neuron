@@ -36,3 +36,13 @@ vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current t
 vim.keymap.set("n", "<leader>tj", "<cmd>tabn<CR>", { desc = "Next tab" })
 vim.keymap.set("n", "<leader>tk", "<cmd>tabp<CR>", { desc = "Previous tab" })
 vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "List buffers" })
+
+vim.keymap.set({ "n", "i", "s" }, "<C-d>", function()
+  if require("noice.lsp").scroll(4) then return end
+  return "<C-d>"
+end, { expr = true })
+
+vim.keymap.set({ "n", "i", "s" }, "<C-u>", function()
+  if require("noice.lsp").scroll(-4) then return end
+  return "<C-u>"
+end, { expr = true })
