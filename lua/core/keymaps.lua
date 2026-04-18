@@ -46,3 +46,10 @@ vim.keymap.set({ "n", "i", "s" }, "<C-u>", function()
   if require("noice.lsp").scroll(-4) then return end
   return "<C-u>"
 end, { expr = true })
+
+vim.keymap.set("n", "K", vim.lsp.buf.hover)
+vim.keymap.set("n", "gl", vim.diagnostic.open_float)
+
+-- vim.keymap.set("n", "<leader>co", ":NeotermToggle<CR>", { desc = "Toggle Terminal" })
+-- vim.keymap.set("n", "<leader>cc", ":NeotermExit<CR>", { desc = "Exit Terminal" })
+

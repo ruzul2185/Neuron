@@ -9,7 +9,8 @@ return {
       { "<leader>s", group = "Window Management" },
       { "<leader>t", group = "Tabs Management" },
       { "<leader>f", group = "Telescope" },
-      { "<leader>l", group = "Lazy Git"},
+      { "<leader>l", group = "Lazy Git",},
+      -- { "<leader>c", group = "Terminal" },
     })
   end,
 
